@@ -5,11 +5,11 @@ import { FaDiscord, FaTelegramPlane } from "react-icons/fa";
 import { FaXTwitter, FaCircleCheck } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 
-function SocialXps() {
+export default function Boost() {
   return (
     <div>
-      <h5 className="text-center font-semibold text-sm">Simple task for more Xp`s</h5>
-      <ul className="grid gap-5 mt-8">
+    {ecosystemTaskList[0].name ? (
+      <ul className="grid gap-5">
         {ecosystemTaskList.map((items, ki) => (
           <li key={ki}>
             <Link
@@ -31,7 +31,9 @@ function SocialXps() {
                   {items.type == "twitter" && !items.completed && (
                     <FaXTwitter />
                   )}
-                  {items.type == "discord" && !items.completed && <FaDiscord />}
+                  {items.type == "discord" && !items.completed && (
+                    <FaDiscord />
+                  )}
                   {items.type == "telegram" && !items.completed && (
                     <FaTelegramPlane />
                   )}
@@ -57,46 +59,49 @@ function SocialXps() {
           </li>
         ))}
       </ul>
-    </div>
-  );
+    ) : (
+      <p className="text-center text-xl font-medium text-black dark:text-white">
+        There are no events at this time, check back later
+      </p>
+    )}
+  </div>
+  )
 }
 
-export default SocialXps;
-
 const ecosystemTaskList = [
-  {
-    name: "Invite 10 Friends",
-    reward: 10000,
-    link: "/",
-    type: "invite",
-    completed: false,
-  },
-  {
-    name: "Follow On X(Twitter)",
-    reward: 2000,
-    link: "https://twitter.com/Enetecosystem",
-    type: "twitter",
-    completed: true,
-  },
-  {
-    name: "Join Telegram Channel",
-    reward: 2000,
-    link: "https://t.me/enetecosystem",
-    type: "telegram",
-    completed: false,
-  },
-  {
-    name: "Join Telegram",
-    reward: 2000,
-    link: "https://t.me/enetworkchannel",
-    type: "telegram",
-    completed: false,
-  },
-  {
-    name: "Join Discord",
-    reward: 2000,
-    link: "https://discord.gg/RQqVWPxuwq",
-    type: "discord",
-    completed: false,
-  },
-];
+    {
+      name: "Invite 10 Friends",
+      reward: 10000,
+      link: "/",
+      type: "invite",
+      completed: false,
+    },
+    {
+      name: "Follow On X(Twitter)",
+      reward: 2000,
+      link: "https://twitter.com/Enetecosystem",
+      type: "twitter",
+      completed: true,
+    },
+    {
+      name: "Join Telegram Channel",
+      reward: 2000,
+      link: "https://t.me/enetecosystem",
+      type: "telegram",
+      completed: false,
+    },
+    {
+      name: "Join Telegram",
+      reward: 2000,
+      link: "https://t.me/enetworkchannel",
+      type: "telegram",
+      completed: false,
+    },
+    {
+      name: "Join Discord",
+      reward: 2000,
+      link: "https://discord.gg/RQqVWPxuwq",
+      type: "discord",
+      completed: false,
+    },
+  ];

@@ -6,7 +6,7 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 
 function page() {
   return (
-    <main className="px-5 pt-2 pb-10">
+    <main className="px-5 pt-2 pb-10 dark:bg-[#131721] bg-[#f5f5f5]">
       <StatusBoard />
       <div className="mt-5">
         <h3 className="font-semibold mb-2">Overview</h3>
@@ -19,7 +19,7 @@ function page() {
       </div>
       <div className="my-8">
         <Link
-          href={"/"}
+          href={"/referral"}
           className="bg-primary dark:bg-dark_primary border border-dashed border-[#b3b2b280] flex py-3 px-4 rounded-xl items-center gap-3"
         >
           <div className="bg-[#f5f5f5] dark:bg-[#23262D] p-3 rounded-lg">

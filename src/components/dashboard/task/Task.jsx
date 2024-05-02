@@ -3,6 +3,8 @@ import { BiCoinStack } from "react-icons/bi";
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 import { TiFlash } from "react-icons/ti";
 import SocialXps from "./SocialXps";
+import Events from "./Events";
+import Boost from "./Boost";
 
 function Task() {
   return (
@@ -34,21 +36,21 @@ function Task() {
       </div>
       <TabsContent
         value="socialXps"
-        className="rounded-2xl bg-white dark:bg-dark_primary drop-shadow-sm px-5 py-6"
+        className="rounded-2xl bg-white dark:bg-dark_primary drop-shadow-sm px-5 py-6 min-h-[500px]"
       >
         <SocialXps />
       </TabsContent>
       <TabsContent
         value="events"
-        className="rounded-2xl bg-white dark:bg-dark_primary drop-shadow-sm px-5 py-3"
+        className="rounded-2xl bg-white dark:bg-dark_primary drop-shadow-sm px-5 py-6 min-h-[500px]"
       >
-        Coming Soon
+        <Events />
       </TabsContent>
       <TabsContent
         value="boost"
-        className="rounded-2xl bg-white dark:bg-dark_primary drop-shadow-sm px-5 pt-6 pb-3"
+        className="rounded-2xl bg-white dark:bg-dark_primary drop-shadow-sm px-5 py-6 min-h-[500px]"
       >
-        Coming Very Soon. Hold tight
+        <Boost />
       </TabsContent>
     </Tabs>
   );

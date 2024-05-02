@@ -5,7 +5,7 @@ import SocialLogin from "@/components/onboarding/SocialLogin";
 
 export default function Onboarding() {
   return (
-    <main className="min-h-screen grid gap-10">
+    <main className="min-h-screen grid gap-10 dark:bg-[#131721] bg-[#f5f5f5]">
       <div className="min-h-96 pt-24 pb-12 grid item-center justify-center gap-7 dark:bg-dark_primary bg-primary rounded-b-[40px] text-center text-black dark:text-white">
         <div className="object-contain h-40 w-40 mx-auto relative">
           <Image

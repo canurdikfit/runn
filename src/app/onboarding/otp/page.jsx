@@ -15,7 +15,7 @@ function page() {
   };
 
   return (
-    <main className="px-5 pt-10 min-h-screen grid items-start">
+    <main className="px-5 pt-10 min-h-screen grid items-start dark:bg-[#131721] bg-[#f5f5f5]">
       <section>
         <div>
           <div>

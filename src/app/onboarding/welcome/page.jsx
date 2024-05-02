@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,7 +16,7 @@ function page() {
 
 
   return (
-    <main className="px-5 pt-10 min-h-screen">
+    <main className="px-5 pt-10 min-h-screen dark:bg-[#131721] bg-[#f5f5f5]">
       <Swiper
         ref={sliderRef}
         effect={"fade"}

@@ -6,7 +6,7 @@ function Overview({ users, referrals, rank, referralCode }) {
   return (
     <div className="h-40 bg-gradient-to-br px-4 py-3 from-black rounded-2xl to-black/60 flex flex-col">
       <div className="flex items-center justify-between">
-        <div className="bg-white/15 p-2 rounded-md">
+        <div className="bg-white/15 dark:text-white text-white p-2 rounded-md">
           <FaTrophy />
         </div>
         <div className="flex items-center gap-2 text-[#ABABAB] font-semibold">
@@ -25,7 +25,7 @@ function Overview({ users, referrals, rank, referralCode }) {
             <h2 className="font-bold text-white text-2xl mt-1">{rank}</h2>
           </div>
         </div>
-        <button className="mt-auto inline-block text-left text-sm">
+        <button className="mt-auto inline-block text-left dark:text-white text-white text-sm">
           Referral Code: {referralCode}
         </button>
       </div>
