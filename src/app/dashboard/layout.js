@@ -14,9 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`
-          min-h-screen dark:bg-[#131721] bg-[#f5f5f5] font-sans antialiased w-screen ${jakarta.className}
-        `}
+        className={`min-h-screen dark:bg-[#131721] bg-[#f5f5f5] font-sans antialiased w-screen ${jakarta.className}`}
       >
         <ThemeProvider
           attribute="class"

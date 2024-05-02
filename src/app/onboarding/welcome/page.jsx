@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef} from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -14,9 +14,8 @@ import WelcomePage from "@/components/onboarding/WelcomePage";
 function page() {
   const sliderRef = useRef();
 
-
   return (
-    <main className="px-5 pt-10 min-h-screen dark:bg-[#131721] bg-[#f5f5f5]">
+    <main className="px-5 pt-10 pb-6 min-h-screen dark:bg-[#131721] bg-[#f5f5f5]">
       <Swiper
         ref={sliderRef}
         effect={"fade"}
@@ -28,7 +27,7 @@ function page() {
         className="h-full"
       >
         {welcomePage.map((items, i) => (
-          <SwiperSlide className="dark:bg-[#131721] bg-[#f5f5f5]" key={i}>
+          <SwiperSlide className="dark:bg-[#131721] bg-[#f5f5f5] h-full" key={i}>
             <WelcomePage
               heading={items.title}
               description={items.description}
@@ -67,8 +66,7 @@ const welcomePage = [
   },
   {
     title: "Claim a nickname",
-    description:
-      "your friends can use this name to join",
+    description: "your friends can use this name to join",
     icon: false,
   },
 ];

@@ -8,7 +8,7 @@ const WelcomePage = ({ heading, description, icon, idx, index, next }) => {
   };
   console.log(next);
   return (
-    <div className="pt-10 flex flex-col min-h-[90vh] justify-between">
+    <div className={`pt-10 flex flex-col ${index <= 2 && 'gap-20'} h-full min-h-[780px] justify-between`}>
       <div>
         <h2 className="text-xl font-semibold">{heading}</h2>
         <p
@@ -20,7 +20,7 @@ const WelcomePage = ({ heading, description, icon, idx, index, next }) => {
         </p>
       </div>
       {icon ? (
-        <div className="bg-black dark:bg-dark_primary h-full min-h-[45vh] rounded-3xl flex flex-col justify-end pb-4 px-4 mt-20">
+        <div className="bg-black dark:bg-dark_primary h-[400px] rounded-3xl flex flex-col justify-end pb-4 px-4 mt-20">
           <div
             className={`relative object-contain mt-auto  mb-14 ${
               index == 0 && "h-[240px]"

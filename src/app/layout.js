@@ -1,6 +1,5 @@
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { cn } from "@/lib/utils";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
@@ -15,9 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`
-       min-h-screen dark:bg-[#131721] bg-[#f5f5f5] font-sans antialiased w-screen ${jakarta.className}
-     `}
+        className={`min-h-screen dark:bg-[#131721] bg-[#f5f5f5] font-sans antialiased w-screen ${jakarta.className}`}
       >
         <ThemeProvider
           attribute="class"

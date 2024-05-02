@@ -65,7 +65,7 @@ const pushNav = [
   {
     icon: <MdOutlineLeaderboard className="text-2xl" />,
     title: "Leaderboard",
-    url: "/",
+    url: "/leaderBoard",
   },
   {
     icon: <MdSecurity className="text-2xl" />,
