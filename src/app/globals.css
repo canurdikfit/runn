@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply text-black dark:text-white;
-}
+
 
 .swiper-pagination {
   top: 0 !important;
