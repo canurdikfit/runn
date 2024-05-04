@@ -1,6 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MiningPort from "./MiningPort";
 import SocialPort from "./SocialPort";
+import Image from "next/image";
+import Spiral from "@/assets/spiral.svg";
 
 export default function StatusBoard() {
   return (
@@ -21,7 +23,7 @@ export default function StatusBoard() {
       </TabsList>
       <TabsContent
         value="mining"
-        className="h-48 z-10 relative -top-1.5 rounded-2xl bg-primary dark:bg-dark_primary px-5 pt-6 pb-3"
+        className="relative h-48 z-10 -top-1.5 rounded-2xl bg-primary dark:bg-dark_primary px-5 pt-6 pb-3"
       >
         <MiningPort
           mined={"49.500,71"}
@@ -29,12 +31,32 @@ export default function StatusBoard() {
           time={"19hrs  23m  12s"}
           rate={"0.25"}
         />
+        <Image
+          src={Spiral}
+          fill={true}
+          sizes="100%"
+          alt="background z-0"
+          className="object-cover dark:invert opacity-5"
+        />
       </TabsContent>
       <TabsContent
         value="social"
-        className="h-48 z-10 relative -top-1.5 rounded-2xl bg-primary dark:bg-dark_primary px-5 py-3"
+        className="relative h-48 z-10 -top-1.5 rounded-2xl bg-primary dark:bg-dark_primary px-5 py-3"
       >
-        <SocialPort earned={'35,545,700'} claimed={'35.500.000'} referral={'500.000'} surf={'45.700'} multiplier={'10'}/>
+        <SocialPort
+          earned={"35,545,700"}
+          claimed={"35.500.000"}
+          referral={"500.000"}
+          surf={"45.700"}
+          multiplier={"10"}
+        />
+        <Image
+          src={Spiral}
+          fill={true}
+          sizes="100%"
+          alt="background z-0"
+          className="object-cover dark:invert opacity-5"
+        />
       </TabsContent>
     </Tabs>
   );

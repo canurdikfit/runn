@@ -2,7 +2,7 @@ import React from 'react'
 
 function MiningPort({mining, mined, time, rate}) {
   return (
-    <div className="text-center font-bold text-[#989898] flex flex-col justify-between h-full">
+    <div className="text-center font-bold text-[#989898] relative z-10 flex flex-col justify-between h-full">
     <h3 className="text-center text-[#989898] text-base">
       $FOUND Mined:{" "}
       <span className="dark:text-white text-black">{mined}</span>

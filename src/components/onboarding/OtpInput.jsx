@@ -1,49 +1,87 @@
 "use client";
 import React, { useState } from "react";
 
-const OtpInput = ({ length = 6, onComplete }) => {
-  const [otp, setOtp] = useState(Array(length).fill(""));
+import {
+  InputOTP,
+  InputOTPGroup,
+  InputOTPSlot,
+} from "@/components/ui/input-otp";
+import Link from "next/link";
 
-  const handleChange = (e, index) => {
-    const value = e.target.value;
-    if (value.length > 1) return; // Ensure only one digit
-
-    const newOtp = [...otp];
-    newOtp[index] = value;
-
-    setOtp(newOtp);
-
-    if (index < length - 1 && value) {
-      // Move focus to the next input
-      e.target.nextElementSibling?.focus();
-    }
-
-    if (newOtp.every((digit) => digit !== "")) {
-      // If all digits are filled, trigger the onComplete callback
-      onComplete(newOtp.join(""));
-    }
-  };
-
-  const handleBackspace = (e, index) => {
-    if (e.key === "Backspace" && !otp[index] && index > 0) {
-      e.target.previousElementSibling?.focus();
-    }
-  };
+const OtpInput = () => {
+  const [value, setValue] = useState("");
 
   return (
-    <div className="grid gap-3 justify-between grid-cols-6">
-      {otp.map((_, index) => (
-        <input
-          key={index}
-          type="text"
-          inputMode="numeric"
-          maxLength={1}
-          value={otp[index]}
-          onChange={(e) => handleChange(e, index)}
-          onKeyDown={(e) => handleBackspace(e, index)}
-          className="text-black dark:text-white bg-primary dark:bg-dark_primary border border-transparent focus:border-black dark:focus:border-white outline-none text-xl text-center h-14 w-full rounded-lg transition-colors ease-in-out duration-200"
-        />
-      ))}
+    <div className="max-w-sm mx-auto w-full flex flex-col justify-between gap-32 flex-grow">
+      <InputOTP
+        maxLength={6}
+        value={value}
+        onChange={(value) => setValue(value)}
+      >
+        <InputOTPGroup className="flex w-full justify-between">
+          <InputOTPSlot
+            index={0}
+            className="h-[50px] w-[50px] rounded-lg text-xl border-transparent text-black dark:text-white bg-primary dark:bg-dark_primary"
+          />
+          <InputOTPSlot
+            index={1}
+            className="h-[50px] w-[50px] rounded-lg text-xl border-transparent text-black dark:text-white bg-primary dark:bg-dark_primary"
+          />
+          <InputOTPSlot
+            index={2}
+            className="h-[50px] w-[50px] rounded-lg text-xl border-transparent text-black dark:text-white bg-primary dark:bg-dark_primary"
+          />
+          <InputOTPSlot
+            index={3}
+            className="h-[50px] w-[50px] rounded-lg text-xl border-transparent text-black dark:text-white bg-primary dark:bg-dark_primary"
+          />
+          <InputOTPSlot
+            index={4}
+            className="h-[50px] w-[50px] rounded-lg text-xl border-transparent text-black dark:text-white bg-primary dark:bg-dark_primary"
+          />
+          <InputOTPSlot
+            index={5}
+            className="h-[50px] w-[50px] rounded-lg text-xl border-transparent text-black dark:text-white bg-primary dark:bg-dark_primary"
+          />
+        </InputOTPGroup>
+      </InputOTP>
+      <div className="mt-auto w-full h-fit grid items-center gap-5 text-center pb-10 max-w-sm mx-auto">
+        {/* <button
+          type="submit"
+          className={`bg-black text-white py-4 font-semibold rounded-xl ${
+            value.length == 6 ? "opacity-100" : "opacity-50"
+          }`}
+          onClick={(e) => {
+            if (!value.length == 6) {
+              e.preventDefault();
+            } else {
+              console.log("working");
+            }
+          }}
+        >
+          Continue
+        </button> */}
+        {/* Link should be removed during integration */}
+        <Link
+          href={"/onboarding/welcome"}
+          className={`bg-black text-white py-4 font-semibold rounded-xl text-center block ${
+            value.length == 6 ? "opacity-100" : "opacity-50"
+          }`}
+          onClick={(e) => {
+            if (!value.length == 6) {
+              e.preventDefault();
+            }
+          }}
+        >
+          Continue
+        </Link>
+        <Link
+          href={"/"}
+          className="text-black dark:text-white text-base font-semibold"
+        >
+          Resend OTP
+        </Link>
+      </div>
     </div>
   );
 };

@@ -41,7 +41,7 @@ const WelcomePage = ({ heading, description, icon, idx, index, next }) => {
             </div>
             <div className="relative z-10">
               <button
-                className="text-xl p-5 rounded-xl bg-white text-black"
+                className="text-xl p-5 rounded-xl bg-white text-black dark:text-black"
                 onClick={() => handleNext()}
               >
                 <FaArrowRightLong />

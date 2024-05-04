@@ -6,7 +6,7 @@ import { HiMiniUserGroup } from "react-icons/hi2";
 
 function page() {
   return (
-    <main className="px-5 pt-2 pb-10 dark:bg-[#131721] bg-[#f5f5f5]">
+    <main className="px-5 pt-24 pb-10 dark:bg-[#131721] bg-[#f5f5f5]">
       <StatusBoard />
       <div className="mt-5">
         <h3 className="font-semibold mb-2">Overview</h3>

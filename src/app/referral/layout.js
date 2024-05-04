@@ -11,7 +11,7 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: "LeaderBoard || Foundation",
+  title: "Referral || Foundation",
   description:
     "Foundation is designed to usher newcomers into the dynamic world of Web3. With an emphasis on web3 education, practical experience and Campaigns",
 };
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <HashNav page={'leaderboard'}/>
+          <HashNav page={'referral'}/>
           {children}
         </ThemeProvider>
       </body>

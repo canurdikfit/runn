@@ -2,7 +2,7 @@ import React from "react";
 
 function SocialPort({ earned, claimed, referral, surf, multiplier }) {
   return (
-    <div className="text-center font-bold text-[#989898] flex flex-col justify-between h-full pb-3">
+    <div className="text-center font-bold text-[#989898] relative z-10 flex flex-col justify-between h-full pb-3">
       <h3 className="text-center text-[#989898] text-base">
         Total Social XP Earned:{" "}
         <span className="dark:text-white text-black">{earned}</span>
