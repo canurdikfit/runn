@@ -1,5 +1,6 @@
 import Header from "@/components/topsection/Header";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 
 import { Inter as FontSans } from "next/font/google";
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         >
           <Header />
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
