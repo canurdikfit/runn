@@ -1,8 +1,14 @@
-import { Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
+import { Inter as FontSans } from "next/font/google";
+
+import { cn } from "@/lib/utils";
+
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata = {
   title: "Foundation || A New Web3 Experience",
@@ -14,7 +20,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`min-h-screen dark:bg-[#131721] bg-[#f5f5f5] font-sans antialiased w-screen ${jakarta.className}`}
+        className={cn(
+          "min-h-screen dark:bg-[#131721] bg-[#f5f5f5] font-sans antialiased w-screen",
+          fontSans.variable
+        )}
       >
         <ThemeProvider
           attribute="class"
