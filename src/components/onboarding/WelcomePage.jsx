@@ -8,7 +8,7 @@ const WelcomePage = ({ heading, description, icon, idx, index, next }) => {
   };
   console.log(next);
   return (
-    <div className={`pt-10 flex flex-col ${index <= 2 && 'gap-20'} h-full min-h-[780px] justify-between`}>
+    <div className={`pt-10 flex flex-col ${index <= 2 && 'gap-20 md:gap-10'} h-full max-w-sm mx-auto min-h-[780px] md:min-h-[700px] justify-between`}>
       <div>
         <h2 className="text-xl font-semibold">{heading}</h2>
         <p

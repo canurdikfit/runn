@@ -54,11 +54,11 @@ function LeaderPositions() {
               )
           )}
         </ul>
-        <li className="py-6 px-5 flex items-center justify-between text-[#939393] font-medium text-sm">
+        <li className="py-6 px-5 md:px-10 lg:px-20 flex items-center justify-between text-[#939393] font-medium text-sm">
           <p>User</p>
           <p>Global Rank</p>
         </li>
-        <ul className="px-5 grid gap-3">
+        <ul className="px-5 md:px-10 lg:px-20 grid gap-3">
           {rankings.map(
             (ranking, idx) =>
               idx >= 3 && (
@@ -97,7 +97,7 @@ function LeaderPositions() {
           )}
         </ul>
       </div>
-      <div className="fixed bottom-5 bg-primary dark:bg-dark_primary inset-x-5 p-2 max-h-20 h-full flex items-center justify-between rounded-xl text-xs text-black dark:text-white font-semibold">
+      <div className="fixed bottom-5 bg-primary dark:bg-dark_primary inset-x-5 md:inset-x-10 lg:inset-x-20 p-2 max-h-20 h-full flex items-center justify-between rounded-xl text-xs text-black dark:text-white font-semibold">
         <div className="flex items-center gap-3 flex-nowrap">
           <Image
             src={Person}

@@ -5,7 +5,7 @@ function page() {
   return (
     <main className="pt-20 min-h-screen grid items-start dark:bg-[#131721] bg-[#f5f5f5]">
       <section>
-        <div className="px-5 ">
+        <div className="px-5 md:px-10 lg:px-20">
           <div className="my-6">
             <h1 className="text-2xl font-semibold">
               Refer your friends and Get up to 5000 XPs{" "}
@@ -21,7 +21,7 @@ function page() {
             </button>
           </div>
         </div>
-        <div className="bg-white dark:bg-dark_primary p-5 pb-10 rounded-t-3xl drop-shadow">
+        <div className="bg-white dark:bg-dark_primary p-5 md:p-10 lg:px-20 pb-10 rounded-t-3xl drop-shadow">
           <div className="pb-3 flex items-center justify-between text-base">
             <h4 className="text-lg">Referrals</h4>{" "}
             <div className="rounded-lg py-2 px-5 dark:bg-[#131721] bg-[#f5f5f5] text-black dark:text-white font-semibold">

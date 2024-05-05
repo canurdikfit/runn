@@ -71,8 +71,8 @@ export default function Events() {
                 </button>
               </DrawerTrigger>
 
-              <DrawerContent className="pb-16">
-                <div className="mx-auto w-full h-fit max-w-sm max-h-[85vh] overflow-y-auto">
+              <DrawerContent className="pb-4">
+                <div className="mx-auto w-full h-fit max-w-sm md:max-w-2xl max-h-[85vh] overflow-y-auto">
                   <DrawerHeader>
                     {items?.details?.image && (
                       <DrawerTitle className="relative h-52 ">

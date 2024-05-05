@@ -71,11 +71,11 @@ export default function Boost() {
                 </button>
               </DrawerTrigger>
 
-              <DrawerContent className="pb-16">
-                <div className="mx-auto w-full h-fit max-w-sm max-h-[85vh] overflow-y-auto">
+              <DrawerContent className="pb-4">
+                <div className="mx-auto w-full h-fit max-w-sm md:max-w-2xl max-h-[85vh] overflow-y-auto">
                   <DrawerHeader>
                     {items?.details?.image && (
-                      <DrawerTitle className="relative h-52 ">
+                      <DrawerTitle className="relative h-52 md:h-72 object-contain">
                         <Image
                           src={items?.details?.image}
                           fill={true}
@@ -85,7 +85,7 @@ export default function Boost() {
                       </DrawerTitle>
                     )}
 
-                    <DrawerDescription className="text-black dark:text-white flex items-center justify-between pt-2">
+                    <DrawerDescription className="text-black dark:text-white flex items-center justify-between pt-2 md:my-3">
                       <h2 className="font-semibold text-base">Enetecosystem</h2>{" "}
                       <span className="text-sm text-[#989898]">
                         Reward: {items?.details?.reward} XP

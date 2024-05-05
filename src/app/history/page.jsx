@@ -5,7 +5,7 @@ import { IoTelescopeOutline } from "react-icons/io5";
 function page() {
   return (
     <main className="pt-20 min-h-screen dark:bg-[#131721] bg-[#f5f5f5]">
-      <div className="mt-8 bg-primary dark:bg-dark_primary rounded-t-3xl px-5 py-6">
+      <div className="mt-8 md:py-14 bg-primary dark:bg-dark_primary rounded-t-3xl px-5 md:px-10 lg:px-20 py-6">
         <h4 className="font-semibold mb-4 ">Today</h4>
         <div>
           <ul className="grid gap-2 ">

@@ -35,7 +35,7 @@ function page() {
             johndoe@gmail.com
           </h1>
         </div>
-        <span className="mt-14 text-[#3A4452] dark:text-[#EBEBEB] text-base mb-4 inline-block">
+        <span className="max-w-sm mx-auto mt-14 text-[#3A4452] dark:text-[#EBEBEB] text-base mb-4 block">
           Input code
         </span>
       </div>
