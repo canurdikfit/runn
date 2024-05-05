@@ -71,8 +71,8 @@ export default function Boost() {
                 </button>
               </DrawerTrigger>
 
-              <DrawerContent className="pb-12">
-                <div className="mx-auto w-full h-fit max-w-sm">
+              <DrawerContent className="pb-16">
+                <div className="mx-auto w-full h-fit max-w-sm max-h-[85vh] overflow-y-auto">
                   <DrawerHeader>
                     {items?.details?.image && (
                       <DrawerTitle className="relative h-52 ">
