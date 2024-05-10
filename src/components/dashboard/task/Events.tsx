@@ -15,6 +15,7 @@ import { FaXTwitter, FaCircleCheck } from "react-icons/fa6";
 import { IoIosArrowForward } from "react-icons/io";
 import { BsGlobe } from "react-icons/bs";
 import Image from "next/image";
+import Event from '@/assets/eventimg.png'
 import Link from "next/link";
 
 const Events = () => {
