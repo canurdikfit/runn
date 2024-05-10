@@ -16,6 +16,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { BsGlobe } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
+import Event from '@/assets/eventimg.png'
 
 const Boost = () => {
   return (
